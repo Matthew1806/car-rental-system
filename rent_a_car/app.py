@@ -15,14 +15,7 @@ app.secret_key = "supersecret"
 csrf = CSRFProtect(app)
 
 # Database settings
-# Use /tmp directory for Render deployment (writable), or local instance for development
-if os.environ.get('RENDER'):
-    db_path = '/tmp/car_rental.db'
-else:
-    db_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'instance', 'car_rental.db')
-    # Ensure instance directory exists locally
-    os.makedirs(os.path.dirname(db_path), exist_ok=True)
-
+db_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'instance', 'car_rental.db')
 app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{db_path}'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['UPLOAD_FOLDER'] = os.path.join(app.root_path, 'static/images/uploads')
@@ -956,6 +949,5 @@ if __name__ == '__main__':
         
         db.session.commit()
     
-    port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port, debug=False)
+    app.run(debug=True)
 
