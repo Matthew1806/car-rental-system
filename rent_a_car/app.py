@@ -900,7 +900,7 @@ if __name__ == '__main__':
             sample_cars = [
                 Car(
                     name="Toyota Vios 2020",
-                    price="₱2,000/day",
+                    price="2,000",
                     specs="Automatic, 5 Seater",
                     image="images/cars/vios.png",
                     transmission="Automatic",
@@ -912,7 +912,7 @@ if __name__ == '__main__':
                 ),
                 Car(
                     name="Honda City 2020",
-                    price="₱2,200/day",
+                    price="2,200",
                     specs="Manual, 5 Seater",
                     image="images/cars/city.jpg",
                     transmission="Manual",
@@ -924,7 +924,7 @@ if __name__ == '__main__':
                 ),
                 Car(
                     name="Mitsubishi Montero 2020",
-                    price="₱3,500/day",
+                    price="3,500",
                     specs="Automatic, 7 Seater",
                     image="images/cars/montero.jpg",
                     transmission="Automatic",
