@@ -83,3 +83,6 @@ rent_a_car/
 ## License
 
 This project is for educational purposes.
+
+## Contributor
+- Errol Matthew Cudala
